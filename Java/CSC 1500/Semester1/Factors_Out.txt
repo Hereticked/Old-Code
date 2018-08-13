@@ -1,0 +1,14 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Factors
+Enter a positive number:
+32
+The factors of 32 are:
+1
+2
+4
+8
+16
+
+C:\Program Files\JDK\bin>

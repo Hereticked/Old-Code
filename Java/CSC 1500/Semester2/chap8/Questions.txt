@@ -1,0 +1,22 @@
+James Poulette
+CSC 1550 03
+99 - 04 - 11
+Questions.txt
+Chapter 8A Page 383 #1 and #2
+Known Bugs : None?
+
+Normal textbook questions? Wow.
+
+1.
+
+   a) Bird
+   b) Language
+   c) Furniture
+
+I chose these answers because in each case they were the less specific of the    two answers. While a child inherits from a parent, a parent does not inherit from a child. And since it seems likely that 'Parrot' could inherit from 'Bird', 'French' could inherit from 'Language', and 'Chair' could inherit from 'Furniture', the opposite is not true, and therefore 'Bird', 'Language' and 'Furniture' must be the parents.
+
+2.
+
+   a) pizza, double cheeseburger, tacos
+   b) Lethal Weapon 4, Saving Private Ryan, The Matrix
+   c) computers, role playing, web design

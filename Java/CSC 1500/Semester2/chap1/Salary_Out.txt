@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java Salary
+
+The weekly salary of this employee will be : $1487.50
+
+C:\Program Files\JDK\bin>

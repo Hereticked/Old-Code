@@ -1,0 +1,18 @@
+Play Computer :
+
+CD_Collection contains 5 cds and is valued at 59.69
+
+add_cds 1 valued at 10.99
+add_cds 3 valued at 39.34
+add_cds 2 valued at 24.73
+
+CD_Collection contains 11 cds and is valued at 134.75
+Average value of cd is 12.25
+
+add_cds 2 valued at 20.82
+add_cds 4 valued at 46.90
+
+CD_Collection contains 17 cds and is valued at 202.47
+Average value of cd is 11.91
+
+End Program

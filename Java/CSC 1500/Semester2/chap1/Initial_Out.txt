@@ -1,0 +1,10 @@
+C:\Program Files\JDK\bin>java Initial
+
+      J   PPPPPPP
+      J   P     P
+      J   PPPPPPP
+J     J   P
+J     J   P
+JJJJJJJ   P
+
+C:\Program Files\JDK\bin>

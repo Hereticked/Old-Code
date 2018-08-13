@@ -1,0 +1,55 @@
+Boolean Data Type
+
+The boolean data type is used to specify a true or false value.
+
+The following is an example of a boolean declaration in a schema:
+<xs:attribute name="disabled" type="xs:boolean"/>
+
+An element in your document might look like this:
+<prize disabled="true">999</prize>
+
+Note: Legal values for boolean are true, false, 1 (which indicates true), and 0 (which indicates false).
+Binary Data Types
+
+Binary data types are used to express binary-formatted data.
+
+We have two binary data types:
+
+    * base64Binary (Base64-encoded binary data)
+    * hexBinary (hexadecimal-encoded binary data)
+
+The following is an example of a hexBinary declaration in a schema:
+<xs:element name="blobsrc" type="xs:hexBinary"/>
+
+AnyURI Data Type
+
+The anyURI data type is used to specify a URI.
+
+The following is an example of an anyURI declaration in a schema:
+<xs:attribute name="src" type="xs:anyURI"/>
+
+An element in your document might look like this:
+<pic src="http://www.w3schools.com/images/smiley.gif" />
+
+Note: If a URI has spaces, replace them with %20.
+Miscellaneous Data Types
+Name 	Description
+anyURI 	 
+base64Binary 	 
+boolean 	 
+double 	 
+float 	 
+hexBinary 	 
+NOTATION 	 
+QName 	 
+
+Restrictions on Miscellaneous Data Types
+
+Restrictions that can be used with the other data types:
+
+    * enumeration (a Boolean data type cannot use this constraint)
+    * length (a Boolean data type cannot use this constraint)
+    * maxLength (a Boolean data type cannot use this constraint)
+    * minLength (a Boolean data type cannot use this constraint)
+    * pattern
+    * whiteSpace

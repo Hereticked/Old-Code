@@ -1,0 +1,163 @@
+Date Data Type
+
+The date data type is used to specify a date.
+
+The date is specified in the following form "YYYY-MM-DD" where:
+
+    * YYYY indicates the year
+    * MM indicates the month
+    * DD indicates the day
+
+Note: All components are required!
+
+The following is an example of a date declaration in a schema:
+<xs:element name="start" type="xs:date"/>
+
+An element in your document might look like this:
+<start>2002-09-24</start>
+Time Zones
+
+To specify a time zone, you can either enter a date in UTC time by adding a "Z" behind the date - like this:
+<start>2002-09-24Z</start>
+
+or you can specify an offset from the UTC time by adding a positive or negative time behind the date - like this:
+<start>2002-09-24-06:00</start>
+
+or
+
+<start>2002-09-24+06:00</start>
+
+Time Data Type
+
+The time data type is used to specify a time.
+
+The time is specified in the following form "hh:mm:ss" where:
+
+    * hh indicates the hour
+    * mm indicates the minute
+    * ss indicates the second
+
+Note: All components are required!
+
+The following is an example of a time declaration in a schema:
+<xs:element name="start" type="xs:time"/>
+
+An element in your document might look like this:
+<start>09:00:00</start>
+
+Or it might look like this:
+<start>09:30:10.5</start>
+Time Zones
+
+To specify a time zone, you can either enter a time in UTC time by adding a "Z" behind the time - like this:
+<start>09:30:10Z</start>
+
+or you can specify an offset from the UTC time by adding a positive or negative time behind the time - like this:
+<start>09:30:10-06:00</start>
+
+or
+
+<start>09:30:10+06:00</start>
+
+DateTime Data Type
+
+The dateTime data type is used to specify a date and a time.
+
+The dateTime is specified in the following form "YYYY-MM-DDThh:mm:ss" where:
+
+    * YYYY indicates the year
+    * MM indicates the month
+    * DD indicates the day
+    * T indicates the start of the required time section
+    * hh indicates the hour
+    * mm indicates the minute
+    * ss indicates the second
+
+Note: All components are required!
+
+The following is an example of a dateTime declaration in a schema:
+<xs:element name="startdate" type="xs:dateTime"/>
+
+An element in your document might look like this:
+<startdate>2002-05-30T09:00:00</startdate>
+
+Or it might look like this:
+<startdate>2002-05-30T09:30:10.5</startdate>
+Time Zones
+
+To specify a time zone, you can either enter a dateTime in UTC time by adding a "Z" behind the time - like this:
+<startdate>2002-05-30T09:30:10Z</startdate>
+
+or you can specify an offset from the UTC time by adding a positive or negative time behind the time - like this:
+<startdate>2002-05-30T09:30:10-06:00</startdate>
+
+or
+
+<startdate>2002-05-30T09:30:10+06:00</startdate>
+
+Duration Data Type
+
+The duration data type is used to specify a time interval.
+
+The time interval is specified in the following form "PnYnMnDTnHnMnS" where:
+
+    * P indicates the period (required)
+    * nY indicates the number of years
+    * nM indicates the number of months
+    * nD indicates the number of days
+    * T indicates the start of a time section (required if you are going to specify hours, minutes, or seconds)
+    * nH indicates the number of hours
+    * nM indicates the number of minutes
+    * nS indicates the number of seconds
+
+The following is an example of a duration declaration in a schema:
+<xs:element name="period" type="xs:duration"/>
+
+An element in your document might look like this:
+<period>P5Y</period>
+
+The example above indicates a period of five years.
+
+Or it might look like this:
+<period>P5Y2M10D</period>
+
+The example above indicates a period of five years, two months, and 10 days.
+
+Or it might look like this:
+<period>P5Y2M10DT15H</period>
+
+The example above indicates a period of five years, two months, 10 days, and 15 hours.
+
+Or it might look like this:
+<period>PT15H</period>
+
+The example above indicates a period of 15 hours.
+Negative Duration
+
+To specify a negative duration, enter a minus sign before the P:
+<period>-P10D</period>
+
+The example above indicates a period of minus 10 days.
+Date and Time Data Types
+Name 	Description
+date 	Defines a date value
+dateTime 	Defines a date and time value
+duration 	Defines a time interval
+gDay 	Defines a part of a date - the day (DD)
+gMonth 	Defines a part of a date - the month (MM)
+gMonthDay 	Defines a part of a date - the month and day (MM-DD)
+gYear 	Defines a part of a date - the year (YYYY)
+gYearMonth 	Defines a part of a date - the year and month (YYYY-MM)
+time 	Defines a time value
+
+Restrictions on Date Data Types
+
+Restrictions that can be used with Date data types:
+
+    * enumeration
+    * maxExclusive
+    * maxInclusive
+    * minExclusive
+    * minInclusive
+    * pattern
+    * whiteSpace

@@ -1,0 +1,56 @@
+Question 1. Consider the following classes:
+
+    public class AnimalHouse<E> {
+        private E animal;
+        public void setAnimal(E x) {
+            animal = x;
+        }
+        public E getAnimal() {
+            return animal;
+        }
+    }
+
+    public class Animal{
+    }
+
+    public class Cat extends Animal {
+    }
+
+    public class Dog extends Animal {
+    }
+
+    For the following code snippets, identify whether the code:
+
+        * fails to compile,
+        * compiles with a warning,
+        * generates an error at runtime, or
+        * none of the above (compiles and runs without problem.) 
+
+            Question 1a. AnimalHouse<Animal> house = new AnimalHouse<Cat>();
+
+            Answer 1a: 1. fails to compile
+
+                AnimalHouse<Cat> and AnimalHouse<Animal> are not compatible types, even though Cat is a subtype of Animal. 
+
+            Question 1b. AnimalHouse<Cat> house = new AnimalHouse<Animal>();
+
+            Answer 1b: 1. fails to compile
+
+                Same as 1a: AnimalHouse<Cat> and AnimalHouse<Animal> are not compatible types, even though Cat is a subtype of Animal. 
+
+            Question 1c. AnimalHouse<?> house = new AnimalHouse<Cat>();
+                         house.setAnimal(new Cat());
+
+            Answer 1c: 1. fails to compile
+
+                While the first line is acceptable — it is OK to define an instance of unknown type — the compiler doesn't know the type of animal stored in house so the setAnimal method cannot be used. 
+
+            Question 1d. AnimalHouse house = new AnimalHouse();
+                         house.setAnimal(new Dog());
+
+            Answer 1d: 2. compiles with a warning
+
+                The compiler doesn't know what type house contains. It will accept the code, but warn that there might be a problem when setting the animal to an instance of Dog.
+
+                Using a generic type as a raw type might be a way to work around a particular compiler error, but you lose the type checking that generics provides, so it is not recommended. 
+

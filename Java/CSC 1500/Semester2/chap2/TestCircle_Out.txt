@@ -1,0 +1,11 @@
+C:\Program Files\JDK\bin>java TestCircle
+
+The diameter of circle 1 is 10.0
+The diameter of circle 2 is 60.0
+The diameter of circle 3 is 2.0
+
+The area of circle 1 is 78.5
+The area of circle 2 is 2826.0
+The area of circle 3 is 3.14
+
+C:\Program Files\JDK\bin>

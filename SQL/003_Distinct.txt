@@ -1,0 +1,26 @@
+The SQL SELECT DISTINCT Statement
+
+In a table, some of the columns may contain duplicate values. This is not a problem, however, sometimes you will want to list only the different (distinct) values in a table.
+
+The DISTINCT keyword can be used to return only distinct (different) values.
+SQL SELECT DISTINCT Syntax
+SELECT DISTINCT column_name(s)
+FROM table_name
+
+SELECT DISTINCT Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+
+Now we want to select only the distinct values from the column named "City" from the table above.
+
+We use the following SELECT statement:
+SELECT DISTINCT City FROM Persons
+
+The result-set will look like this:
+City
+Sandnes
+Stavanger

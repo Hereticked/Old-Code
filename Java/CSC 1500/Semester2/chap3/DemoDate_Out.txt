@@ -1,0 +1,6 @@
+C:\Program Files\JDK\bin>java DemoDate
+The current date is Sun Feb 07 00:00:00 EST 1999
+The class started on Thu Jan 21 00:00:00 EST 1999
+Time elapsed is 82489410 milliseconds
+
+C:\Program Files\JDK\bin>

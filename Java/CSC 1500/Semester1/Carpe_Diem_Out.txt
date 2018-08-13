@@ -1,0 +1,31 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Carpe_Diem
+str1: Seize the day
+str2:
+str3: Seize the day
+str4: Day of the seize
+str5: Seize the day
+
+Length of str1: 13
+Length of str2: 0
+
+Index of 'e' in str4: 9
+Last index of 'e' in str4: 15
+The character at position 3 in str1: z
+The substring of str1 from position 6 to position 8: the
+
+str1 and str5 refer to the same object.
+str1 and str3 do NOT refer to the same object.
+str1 and str3 contain the same characters.
+
+str2 now refers to: SEIZE THE DAY
+str1 and str2 contain the same characters (ignoring case).
+str5 now refers to: SXizX thX day
+
+str1 starts with "Seize": true
+Creating a string from a number: 99
+
+C:\Program Files\JDK\bin>
+

@@ -1,0 +1,43 @@
+    Question 1: Assume that you have written some classes. Belatedly, you decide that they should be split into three packages, as listed in the table below. Furthermore, assume that the classes are currently in the default package (they have no package statements).
+
+        Package Name    -   Class Name
+        -------------------------------
+
+        mygame.server   -   Server
+
+        mygame.shared   -   Utilities
+
+        mygame.client   -   Client
+
+
+        a. What line of code will you need to add to each source file to put each class in the right package?
+        Answer 1a: The first line of each file must specify the package:
+
+        In Client.java add:
+            package mygame.client;
+        In Server.java add:
+            package mygame.server;:
+        In Utilities.java add:
+            package mygame.shared;
+
+        b. To adhere to the directory structure, you will need to create some subdirectories in your development directory, and put source files in the correct subdirectories. What subdirectories must you create? Which subdirectory does each source file go in?
+        Answer 1b: Within the mygame directory, you need to create three subdirectories: client, server, and shared.
+
+        In mygame/client/ place:
+            Client.java
+        In mygame/server/ place:
+            Server.java
+        In mygame/shared/ place:
+            Utilities.java
+
+        c. Do you think you'll need to make any other changes to the source files to make them compile correctly? If so, what?
+        Answer 1c: Yes, you need to add import statements. Client.java and Server.java need to import the Utilities class, which they can do in one of two ways:
+
+            import mygame.shared.*;
+                   --or--
+            import mygame.shared.Utilities;
+
+        Also, Server.java needs to import the Client class:
+
+            import mygame.client.Client;
+

@@ -1,0 +1,33 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Histogram
+
+Please enter letter grades (A-F or Q to quit) :
+
+a
+
+b
+
+c
+
+d
+
+e
+
+f
+
+q
+
+                Grade Histogram
+                ---------------
+A: *
+B: *
+C: *
+D: *
+E: *
+F: *
+
+This program is terminated.
+
+C:\Program Files\JDK\bin>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+...
+...
+</xs:schema>
+
+
+
+/* The following fragment:
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+indicates that the elements and data types used in the schema come from the "http://www.w3.org/2001/XMLSchema" namespace. It also specifies that the elements and data types that come from the "http://www.w3.org/2001/XMLSchema" namespace should be prefixed with xs:
+
+This fragment:
+targetNamespace="http://www.w3schools.com"
+
+indicates that the elements defined by this schema (note, to, from, heading, body.) come from the "http://www.w3schools.com" namespace.
+
+This fragment:
+xmlns="http://www.w3schools.com"
+
+indicates that the default namespace is "http://www.w3schools.com".
+
+This fragment:
+elementFormDefault="qualified"
+
+indicates that any elements used by the XML instance document which were declared in this schema must be namespace qualified. */

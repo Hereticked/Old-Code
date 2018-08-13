@@ -1,0 +1,6 @@
+C:\Program Files\JDK\bin>java Numbers
+The sum of the numbers is : 735
+The difference of the numbers is : 597
+The product of the numbers is : 45954
+
+C:\Program Files\JDK\bin>

@@ -1,0 +1,7 @@
+C:\Program Files\JDK\bin>java DemoClassVar
+The number of one site is 101
+Headquarters located at Crystal Lake, IL
+The number of another site is 202
+Headquarters located at Crystal Lake, IL
+
+C:\Program Files\JDK\bin>

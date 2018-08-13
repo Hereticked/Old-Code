@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java DemoConstruct
+Site number is 678
+Another site number is 999
+
+C:\Program Files\JDK\bin>

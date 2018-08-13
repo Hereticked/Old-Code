@@ -1,0 +1,7 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Sum
+The sum of 6 and 9 is 15
+
+C:\Program Files\JDK\bin>

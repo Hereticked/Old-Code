@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body>
+  <m:GetPrice xmlns:m="http://www.w3schools.com/prices">
+    <m:Item>Apples</m:Item>
+  </m:GetPrice>
+</soap:Body>
+
+</soap:Envelope>
+
+
+
+/* The example above requests the price of apples. Note that the m:GetPrice and the Item elements above are application-specific elements. They are not a part of the SOAP namespace.
+
+A SOAP response could look something like this: */
+
+
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body>
+  <m:GetPriceResponse xmlns:m="http://www.w3schools.com/prices">
+    <m:Price>1.90</m:Price>
+  </m:GetPriceResponse>
+</soap:Body>
+
+</soap:Envelope>

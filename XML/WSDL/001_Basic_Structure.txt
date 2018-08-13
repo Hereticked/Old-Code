@@ -1,0 +1,22 @@
+/* Web Service Description Language (WSDL), the proposed standard for how a Web service is described, is an XML-based service IDL (Interface Definitition Language) that defines the service interface and its implementation characteristics. WSDL is referenced by UDDI entries and describes the SOAP messages that define a particular Web service. */
+
+
+<definitions>
+
+<types>
+  definition of types........
+</types>
+
+<message>
+  definition of a message....
+</message>
+
+<portType>
+  definition of a port.......
+</portType>
+
+<binding>
+  definition of a binding....
+</binding>
+
+</definitions>

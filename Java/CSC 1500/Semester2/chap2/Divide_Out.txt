@@ -1,0 +1,4 @@
+C:\Program Files\JDK\bin>java Divide
+104 / 12 = 8   r 8
+
+C:\Program Files\JDK\bin>

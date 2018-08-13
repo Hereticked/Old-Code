@@ -1,0 +1,53 @@
+/* Operation Types
+
+The request-response type is the most common operation type, but WSDL defines four types:
+
+One-way 	The operation can receive a message but will not return a response
+Request-response 	The operation can receive a request and will return a response
+Solicit-response 	The operation can send a request and will wait for a response
+Notification 	The operation can send a message but will not wait for a response */
+
+
+// A one-way operation example:
+
+
+<message name="newTermValues">
+  <part name="term" type="xs:string"/>
+  <part name="value" type="xs:string"/>
+</message>
+
+<portType name="glossaryTerms">
+  <operation name="setTerm">
+    <input name="newTerm" message="newTermValues"/>
+  </operation>
+</portType >
+
+
+/* In the example above, the port "glossaryTerms" defines a one-way operation called "setTerm".
+
+The "setTerm" operation allows input of new glossary terms messages using a "newTermValues" message with the input parameters "term" and "value". However, no output is defined for the operation. */
+
+
+
+// A request-response operation example:
+
+
+<message name="getTermRequest">
+  <part name="term" type="xs:string"/>
+</message>
+
+<message name="getTermResponse">
+  <part name="value" type="xs:string"/>
+</message>
+
+<portType name="glossaryTerms">
+  <operation name="getTerm">
+    <input message="getTermRequest"/>
+    <output message="getTermResponse"/>
+  </operation>
+</portType>
+
+
+/* In the example above, the port "glossaryTerms" defines a request-response operation called "getTerm".
+
+The "getTerm" operation requires an input message called "getTermRequest" with a parameter called "term", and will return an output message called "getTermResponse" with a parameter called "value". */

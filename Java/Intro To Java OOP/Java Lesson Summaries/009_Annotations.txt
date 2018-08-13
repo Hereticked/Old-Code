@@ -1,0 +1,51 @@
+    Question 1: What is wrong with the following interface:
+
+        public interface House {
+            @Deprecated
+            public void open();
+            public void openFrontDoor();
+            public void openBackDoor();
+        }
+
+    Answer 1:The documentation should reflect why open is deprecated and what to use instead. For example:
+
+        public interface House { 
+            /**
+             * @deprecated use of open is discouraged, use
+             * openFrontDoor or openBackDoor instead.
+             */
+            @Deprecated
+            public void open(); 
+            public void openFrontDoor();
+            public void openBackDoor();
+        }
+
+    Question 2: Consider this implementation of the House interface, shown in Question 1.
+
+        public class MyHouse implements House {
+            public void open() {}
+            public void openFrontDoor() {}
+            public void openBackDoor() {}
+        }
+
+    If you compile this program, the compiler complains that open has been deprecated (in the interface). What can you do to get rid of that warning?
+
+    Answer 2: You can deprecate the implementation of open:
+
+        public class MyHouse implements House { 
+            //The documentation is inherited from the interface.
+            @Deprecated
+            public void open() {} 
+            public void openFrontDoor() {}
+            public void openBackDoor() {}
+        }
+
+    Alternatively, you can suppress the warning:
+
+        public class MyHouse implements House { 
+            @SuppressWarnings("deprecation")
+            public void open() {} 
+            public void openFrontDoor() {}
+            public void openBackDoor() {}
+        }
+

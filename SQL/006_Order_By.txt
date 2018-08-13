@@ -1,0 +1,48 @@
+The ORDER BY Keyword
+
+The ORDER BY keyword is used to sort the result-set by a specified column.
+
+The ORDER BY keyword sort the records in ascending order by default.
+
+If you want to sort the records in a descending order, you can use the DESC keyword.
+SQL ORDER BY Syntax
+SELECT column_name(s)
+FROM table_name
+ORDER BY column_name(s) ASC|DESC
+
+ORDER BY Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Tom 	Vingvn 23 	Stavanger
+
+Now we want to select all the persons from the table above, however, we want to sort the persons by their last name.
+
+We use the following SELECT statement:
+SELECT * FROM Persons
+ORDER BY LastName
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+4 	Nilsen 	Tom 	Vingvn 23 	Stavanger
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+
+ORDER BY DESC Example
+
+Now we want to select all the persons from the table above, however, we want to sort the persons descending by their last name.
+
+We use the following SELECT statement:
+SELECT * FROM Persons
+ORDER BY LastName DESC
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Tom 	Vingvn 23 	Stavanger
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes

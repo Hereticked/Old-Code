@@ -1,0 +1,40 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Menu
+
+                         Menu
+                         ----
+
+         Select                          To Obtain
+         ------                          ---------
+
+           1                             State Name
+           2                             State Capital
+           3                             State Bird
+           4                             State Flower
+           5                             State Tree
+           6                             State Motto
+           7                             State Fruit
+           8                             Quit
+
+Enter your selection : 4
+
+Rose
+
+                         Menu
+                         ----
+
+         Select                          To Obtain
+         ------                          ---------
+
+           1                             State Name
+           2                             State Capital
+           3                             State Bird
+           4                             State Flower
+           5                             State Tree
+           6                             State Motto
+           7                             State Fruit
+           8                             Quit
+
+Enter your selection :

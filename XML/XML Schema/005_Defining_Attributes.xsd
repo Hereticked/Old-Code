@@ -1,0 +1,36 @@
+/*  Simple elements cannot have attributes. If an element has attributes, it is considered to be of a complex type. But the attribute itself is always declared as a simple type.
+
+How to Define an Attribute?
+
+
+The syntax for defining an attribute is:
+<xs:attribute name="xxx" type="yyy"/>
+
+
+Here is an XML element with an attribute:
+<lastname lang="EN">Smith</lastname>
+
+And here is the corresponding attribute definition:
+<xs:attribute name="lang" type="xs:string"/>
+
+
+
+Attributes may have a default value OR a fixed value specified.
+
+
+A default value is automatically assigned to the attribute when no other value is specified.
+
+In the following example the default value is "EN":
+<xs:attribute name="lang" type="xs:string" default="EN"/>
+
+A fixed value is also automatically assigned to the attribute, and you cannot specify another value.
+
+In the following example the fixed value is "EN":
+<xs:attribute name="lang" type="xs:string" fixed="EN"/>
+
+
+
+Optional and Required Attributes
+
+Attributes are optional by default. To specify that the attribute is required, use the "use" attribute:
+<xs:attribute name="lang" type="xs:string" use="required"/>   */

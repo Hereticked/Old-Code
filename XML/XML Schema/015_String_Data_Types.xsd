@@ -1,0 +1,45 @@
+Token Data Type
+
+The token data type is also derived from the String data type.
+
+The token data type also contains characters, but the XML processor will remove line feeds, carriage returns, tabs, leading and trailing spaces, and multiple spaces.
+
+The following is an example of a token declaration in a schema:
+<xs:element name="customer" type="xs:token"/>
+
+An element in your document might look like this:
+<customer>John Smith</customer>
+
+Or it might look like this:
+<customer>     John Smith     </customer>
+
+Note: In the example above the XML processor will remove the tabs.
+String Data Types
+
+Note that all of the data types below derive from the String data type (except for string itself)!
+Name 	Description
+ENTITIES 	 
+ENTITY 	 
+ID 	A string that represents the ID attribute in XML (only used with schema attributes)
+IDREF 	A string that represents the IDREF attribute in XML (only used with schema attributes)
+IDREFS 	 
+language 	A string that contains a valid language id
+Name 	A string that contains a valid XML name
+NCName 	 
+NMTOKEN 	A string that represents the NMTOKEN attribute in XML (only used with schema attributes)
+NMTOKENS 	 
+normalizedString 	A string that does not contain line feeds, carriage returns, or tabs
+QName 	 
+string 	A string
+token 	A string that does not contain line feeds, carriage returns, tabs, leading or trailing spaces, or multiple spaces
+
+Restrictions on String Data Types
+
+Restrictions that can be used with String data types:
+
+    * enumeration
+    * length
+    * maxLength
+    * minLength
+    * pattern (NMTOKENS, IDREFS, and ENTITIES cannot use this constraint)
+    * whiteSpace

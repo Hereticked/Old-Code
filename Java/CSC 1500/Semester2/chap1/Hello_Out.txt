@@ -1,0 +1,7 @@
+C:\Program Files\JDK\bin>java Hello
+
+Hello, world!
+
+I'm ready for Java programming!
+
+C:\Program Files\JDK\bin>

@@ -1,0 +1,7 @@
+C:\Program Files\jdk1.2\bin>appletviewer DemoPaint.html
+in paint method
+in paint method
+in paint method
+in paint method
+
+C:\Program Files\jdk1.2\bin>

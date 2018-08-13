@@ -1,0 +1,34 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Par_Pas
+
+Before method call
+Actual parameter 1: 6
+Actual parameter 2: 9
+Actual parameter 3: 7
+Actual parameter 4: 1
+Actual parameter 5: 10
+
+Before changing values
+Formal parameter 1: 6
+Formal parameter 2: 9
+Formal parameter 3: 7
+Formal parameter 4: 1
+Formal parameter 5: 10
+
+After changing values
+Formal parameter 1: 6
+Formal parameter 2: 5
+Formal parameter 3: 7
+Formal parameter 4: 8
+Formal parameter 5: 20
+
+After method call
+Actual parameter 1: 6
+Actual parameter 2: 9
+Actual parameter 3: 7
+Actual parameter 4: 8
+Actual parameter 5: 10
+
+C:\Program Files\JDK\bin>

@@ -1,0 +1,66 @@
+The WHERE Clause 
+
+The WHERE clause is used to extract only those records that fulfill a specified criterion.
+SQL WHERE Syntax
+SELECT column_name(s)
+FROM table_name
+WHERE column_name operator value
+
+WHERE Clause Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+
+Now we want to select only the persons living in the city "Sandnes" from the table above.
+
+We use the following SELECT statement:
+SELECT * FROM Persons
+WHERE City='Sandnes'
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+
+Quotes Around Text Fields
+
+SQL uses single quotes around text values (most database systems will also accept double quotes).
+
+Although, numeric values should not be enclosed in quotes.
+
+For text values:
+This is correct:
+
+SELECT * FROM Persons WHERE FirstName='Tove'
+
+This is wrong:
+
+SELECT * FROM Persons WHERE FirstName=Tove
+
+For numeric values:
+This is correct:
+
+SELECT * FROM Persons WHERE Year=1965
+
+This is wrong:
+
+SELECT * FROM Persons WHERE Year='1965'
+
+Operators Allowed in the WHERE Clause
+
+With the WHERE clause, the following operators can be used:
+Operator 	Description
+= 	Equal
+<> 	Not equal
+> 	Greater than
+< 	Less than
+>= 	Greater than or equal
+<= 	Less than or equal
+BETWEEN 	Between an inclusive range
+LIKE 	Search for a pattern
+IN 	If you know the exact value you want to return for at least one of the columns
+
+Note: In some versions of SQL the <> operator may be written as !=

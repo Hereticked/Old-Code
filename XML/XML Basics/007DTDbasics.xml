@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE note SYSTEM "Note.dtd">
+<note>
+<to>Tove</to>
+<from>Jani</from>
+<heading>Reminder</heading>
+<body>Don't forget me this weekend!</body>
+</note>
+
+
+/* The DOCTYPE declaration in the example above, is a reference to an external Document Type Definition (DTD) file. The content of the file is shown in the paragraph below. */
+
+
+<!DOCTYPE note
+[
+<!ELEMENT note (to,from,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>
+
+
+/* The purpose of a DTD is to define the structure of an XML document. It defines the structure with a list of legal elements. */

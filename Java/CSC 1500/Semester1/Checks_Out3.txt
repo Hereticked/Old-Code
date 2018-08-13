@@ -1,0 +1,54 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Checks
+
+You have $10,000.00 in your checking account.
+
+You may enter checks one at a time. If at any time you
+enter a value of zero or less this program will terminate.
+Checks that exceed your current balance will not be counted.
+When you are done writing checks a report will be displayed.
+
+Your current balance is $10000.00
+
+Enter check amount [0 to terminate] : $123
+
+Your current balance is $9877.00
+
+Enter check amount [0 to terminate] : $234
+
+Your current balance is $9643.00
+
+Enter check amount [0 to terminate] : $345
+
+Your current balance is $9298.00
+
+Enter check amount [0 to terminate] : $456
+
+Your current balance is $8842.00
+
+Enter check amount [0 to terminate] : $567
+
+Your current balance is $8275.00
+
+Enter check amount [0 to terminate] : $0
+
+Program terminated
+
+            Check Writing Report
+            --------------------
+
+Beginning Balance                :   $10000.00
+Number of Checks Written         :   5
+Total Sum of Checks Written      :   $1725.00
+Largest Check Written            :   $567.00
+Smallest Check Written           :   $123.00
+Average Check Written            :   $345.00
+Ending Balance                   :   $8275.00
+
+C:\Program Files\JDK\bin>
+
+
+
+

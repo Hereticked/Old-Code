@@ -1,0 +1,42 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Change
+
+Enter the purchase amount [0-100] (-1 to quit): 54
+Your change of 46 cents is given as:
+1 Quarter
+2 Dimes
+0 Nickels
+1 Penny
+
+Enter the purchase amount [0-100] (-1 to quit): 51
+Your change of 49 cents is given as:
+1 Quarter
+2 Dimes
+0 Nickels
+4 Pennies
+
+Enter the purchase amount [0-100] (-1 to quit): 102
+The maximum purchase amount is 100.
+
+Enter the purchase amount [0-100] (-1 to quit): -3
+The minimum purchase amount is 0.
+
+Enter the purchase amount [0-100] (-1 to quit): 100
+Your change of 0 cents is given as:
+0 Quarters
+0 Dimes
+0 Nickels
+0 Pennies
+
+Enter the purchase amount [0-100] (-1 to quit): 0
+Your change of 100 cents is given as:
+4 Quarters
+0 Dimes
+0 Nickels
+0 Pennies
+
+Enter the purchase amount [0-100] (-1 to quit): -1
+
+C:\Program Files\JDK\bin>

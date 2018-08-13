@@ -1,0 +1,57 @@
+The <anyAttribute> Element
+
+The <anyAttribute> element enables us to extend the XML document with attributes not specified by the schema.
+
+The following example is a fragment from an XML schema called "family.xsd". It shows a declaration for the "person" element. By using the <anyAttribute> element we can add any number of attributes to the "person" element:
+<xs:element name="person">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+    </xs:sequence>
+    <xs:anyAttribute/>
+  </xs:complexType>
+</xs:element>
+
+Now we want to extend the "person" element with a "gender" attribute. In this case we can do so, even if the author of the schema above never declared any "gender" attribute.
+
+Look at this schema file, called "attribute.xsd":
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+
+<xs:attribute name="gender">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="male|female"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+</xs:schema>
+
+The XML file below (called "Myfamily.xml"), uses components from two different schemas; "family.xsd" and "attribute.xsd":
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<persons xmlns="http://www.microsoft.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:SchemaLocation="http://www.microsoft.com family.xsd
+http://www.w3schools.com attribute.xsd">
+
+<person gender="female">
+  <firstname>Hege</firstname>
+  <lastname>Refsnes</lastname>
+</person>
+
+<person gender="male">
+  <firstname>Stale</firstname>
+  <lastname>Refsnes</lastname>
+</person>
+
+</persons>
+
+The XML file above is valid because the schema "family.xsd" allows us to add an attribute to the "person" element.
+
+The <any> and <anyAttribute> elements are used to make EXTENSIBLE documents! They allow documents to contain additional elements that are not declared in the main XML schema.

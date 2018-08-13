@@ -1,0 +1,28 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Checks
+
+You have $10,000.00 in your checking account.
+
+You may enter checks one at a time. If at any time you
+enter a value of zero or less this program will terminate.
+Checks that exceed your current balance will not be counted.
+When you are done writing checks a report will be displayed.
+
+Your current balance is $10000.00
+
+Enter check amount [0 to terminate] : $123456
+
+You cannot write a check for $123456.00
+
+Your current balance is $10000.00
+
+Enter check amount [0 to terminate] : $-1
+
+Program terminated
+
+You did not write any checks. No report will be displayed.
+
+C:\Program Files\JDK\bin>
+

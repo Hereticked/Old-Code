@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java TimeLeft
+
+There are only 326 days left before Y2K destroys modern civilization.
+
+C:\Program Files\JDK\bin>

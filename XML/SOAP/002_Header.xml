@@ -1,0 +1,29 @@
+/* The optional SOAP Header element contains application-specific information (like authentication, payment, etc) about the SOAP message.
+
+If the Header element is present, it must be the first child element of the Envelope element.
+
+Note: All immediate child elements of the Header element must be namespace-qualified. */
+
+
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Header>
+  <m:Trans xmlns:m="http://www.w3schools.com/transaction/"
+  soap:mustUnderstand="1">234
+  </m:Trans>
+</soap:Header>
+...
+...
+</soap:Envelope>
+
+
+
+/* The example above contains a header with a "Trans" element, a "mustUnderstand" attribute with a value of 1, and a value of 234.
+
+SOAP defines three attributes in the default namespace ("http://www.w3.org/2001/12/soap-envelope"). These attributes are: mustUnderstand, actor, and encodingStyle.
+
+The attributes defined in the SOAP Header defines how a recipient should process the SOAP message. */

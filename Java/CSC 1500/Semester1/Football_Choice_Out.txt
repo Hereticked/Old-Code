@@ -1,0 +1,18 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Football_Choice
+Enter 1 for heads or 2 for tails:
+1
+Enter 1 to receive and 2 to kickoff:
+1
+You won the toss and will receive.
+
+C:\Program Files\JDK\bin>java Football_Choice
+Enter 1 for heads or 2 for tails:
+2
+Enter 1 to receive and 2 to kickoff:
+1
+You lost the coin toss.
+
+C:\Program Files\JDK\bin>

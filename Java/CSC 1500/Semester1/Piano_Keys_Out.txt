@@ -1,0 +1,10 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Piano_Keys
+The number of piano keys: 88
+
+C:\Program Files\JDK\bin>
+
+
+

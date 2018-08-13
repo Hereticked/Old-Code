@@ -1,0 +1,12 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Counter
+1
+2
+3
+4
+5
+done
+
+C:\Program Files\JDK\bin>

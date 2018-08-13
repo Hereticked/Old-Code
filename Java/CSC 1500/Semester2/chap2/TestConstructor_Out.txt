@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java TestConstructor
+The number of the event site is 999
+The manager is ZZZ
+
+C:\Program Files\JDK\bin>

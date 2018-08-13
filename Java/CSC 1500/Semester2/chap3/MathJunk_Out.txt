@@ -1,0 +1,12 @@
+C:\Program Files\JDK\bin>java MathJunk
+
+The square root of 30 is 5.477225575051661
+The sine of 100 is -0.5063656411097588
+The cosine of 100 is 0.8623188722876839
+The floor of 44.7 is 44.0
+The ceiling of 44.7 is 45.0
+The round of 44.7 is 45
+The larger of the character K and the integer 70 is 107
+The smaller of the character K and the integer 70 is 70
+
+C:\Program Files\JDK\bin>

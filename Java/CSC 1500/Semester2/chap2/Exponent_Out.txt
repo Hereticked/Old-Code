@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java Exponent
+4 squared is 16
+4 cubed is 64
+
+C:\Program Files\JDK\bin>

@@ -1,0 +1,31 @@
+Complex Empty Elements
+
+An empty XML element:
+<product prodid="1345" />
+
+The "product" element above has no content at all. To define a type with no content, we must define a type that allows elements in its content, but we do not actually declare any elements, like this:
+<xs:element name="product">
+  <xs:complexType>
+    <xs:complexContent>
+      <xs:restriction base="xs:integer">
+        <xs:attribute name="prodid" type="xs:positiveInteger"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:element>
+
+In the example above, we define a complex type with a complex content. The complexContent element signals that we intend to restrict or extend the content model of a complex type, and the restriction of integer declares one attribute but does not introduce any element content.
+
+However, it is possible to declare the "product" element more compactly, like this:
+<xs:element name="product">
+  <xs:complexType>
+    <xs:attribute name="prodid" type="xs:positiveInteger"/>
+  </xs:complexType>
+</xs:element>
+
+Or you can give the complexType element a name, and let the "product" element have a type attribute that refers to the name of the complexType (if you use this method, several elements can refer to the same complex type):
+<xs:element name="product" type="prodtype"/>
+
+<xs:complexType name="prodtype">
+  <xs:attribute name="prodid" type="xs:positiveInteger"/>
+</xs:complexType>

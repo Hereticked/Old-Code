@@ -1,0 +1,8 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Countdown
+Three...Two...One...Zero...Liftoff!
+Houston, we have a problem.
+
+C:\Program Files\JDK\bin>

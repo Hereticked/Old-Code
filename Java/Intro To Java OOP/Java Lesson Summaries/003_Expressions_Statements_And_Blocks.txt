@@ -1,0 +1,23 @@
+       1. Operators may be used in building expressions, which compute values.
+
+       2. Expressions are the core components of statements.
+
+       3. Statements may be grouped into blocks.
+
+       4. The following code snippet is an example of a compound expression.
+
+               1 * 2 * 3
+
+       5. Statements are roughly equivalent to sentences in natural languages, but instead of ending with a period, a statement ends with a semicolon.
+
+       6. A block is a group of zero or more statements between balanced braces and can be used anywhere a single statement is allowed. 
+
+
+
+    Identify the following kinds of expression statements:
+
+        * aValue = 8933.234; // assignment statement
+        * aValue++; // increment statement
+        * System.out.println("Hello World!"); // method invocation statement
+        * Bicycle myBike = new Bicycle(); // object creation statement 
+

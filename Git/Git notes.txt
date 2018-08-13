@@ -1,0 +1,36 @@
+git init - start new git repository
+
+git status - status of current repository
+
+git add - stage file to repository
+
+git add . - stage all new and changed files
+
+git commit -m "..." - commit staged files to repository along with message describing changes
+
+git branch - show branches of repository (* = branch you're currently in)
+
+git branch (branch name) - create branch
+
+git checkout (branch name) - switch to that branch
+
+git merge (branch name) - merge listed branch with branch you're currently in
+
+git branch (branch name) -d - delete branch
+
+git log - shows log of commits
+
+git revert (commit ID) - revert all files to what they were before this commit (get commit # from log)
+
+
+
+create .gitignore file to list files and directories you don't want included in your Git repository
+
+
+Set Github project path
+-----------------------
+git remote add origin (url of github respository).git
+
+Upload project to Github
+------------------------
+git push -u origin master

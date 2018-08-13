@@ -1,0 +1,46 @@
+The SQL SELECT Statement
+
+The SELECT statement is used to select data from a database.
+
+The result is stored in a result table, called the result-set.
+SQL SELECT Syntax
+SELECT column_name(s)
+FROM table_name
+
+and
+SELECT * FROM table_name
+
+Note Note: SQL is not case sensitive. SELECT is the same as select.
+An SQL SELECT Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+
+Now we want to select the content of the columns named "LastName" and "FirstName" from the table above.
+
+We use the following SELECT statement:
+SELECT LastName,FirstName FROM Persons
+
+The result-set will look like this:
+LastName 	FirstName
+Hansen 	Ola
+Svendson 	Tove
+Pettersen 	Kari
+
+SELECT * Example
+
+Now we want to select all the columns from the "Persons" table.
+
+We use the following SELECT statement: 
+SELECT * FROM Persons
+
+Tip: The asterisk (*) is a quick way of selecting all columns!
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger

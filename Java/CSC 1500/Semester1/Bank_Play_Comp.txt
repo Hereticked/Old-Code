@@ -1,0 +1,23 @@
+Play Computer :
+
+BankAcct 1 has 2000.00 in it
+BankAcct 2 has 1000.00 in it
+
+deposit 700.00 in BankAcct 1
+deposit 500.00 in BankAcct 2
+
+BankAcct 1 has 2700.00 in it
+BankAcct 2 has 1500.00 in it
+
+withdraw 1300.00 from BankAcct 1
+withdraw 1400.00 from BankAcct 2
+
+BankAcct 1 has 1400.00 in it
+BankAcct 2 has 100.00 in it
+
+That's all folks!
+
+End Program
+
+
+

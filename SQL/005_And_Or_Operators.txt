@@ -1,0 +1,52 @@
+The AND & OR Operators
+
+The AND operator displays a record if both the first condition and the second condition is true.
+
+The OR operator displays a record if either the first condition or the second condition is true.
+AND Operator Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+
+Now we want to select only the persons with the first name equal to "Tove" AND the last name equal to "Svendson":
+
+We use the following SELECT statement:
+SELECT * FROM Persons
+WHERE FirstName='Tove'
+AND LastName='Svendson'
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+
+OR Operator Example
+
+Now we want to select only the persons with the first name equal to "Tove" OR the first name equal to "Ola":
+
+We use the following SELECT statement:
+SELECT * FROM Persons
+WHERE FirstName='Tove'
+OR FirstName='Ola'
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+
+Combining AND & OR
+
+You can also combine AND and OR (use parenthesis to form complex expressions).
+
+Now we want to select only the persons with the last name equal to "Svendson" AND the first name equal to "Tove" OR to "Ola":
+
+We use the following SELECT statement:
+SELECT * FROM Persons WHERE
+LastName='Svendson'
+AND (FirstName='Tove' OR FirstName='Ola')
+
+The result-set will look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes

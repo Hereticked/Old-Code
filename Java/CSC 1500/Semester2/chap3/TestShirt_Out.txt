@@ -1,0 +1,15 @@
+C:\Program Files\JDK\bin>java TestShirt
+
+Collar size = 6
+Sleeve length = 24
+Material = cotton
+
+Collar size = 5
+Sleeve length = 30
+Material = cotton
+
+Collar size = 7
+Sleeve length = 42
+Material = cotton
+
+C:\Program Files\JDK\bin>

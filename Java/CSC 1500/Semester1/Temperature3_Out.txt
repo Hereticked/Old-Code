@@ -1,0 +1,18 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Temperature3
+Enter the temperature:
+40
+Current temperature: 40
+Above freezing.
+Wrapping up.
+
+C:\Program Files\JDK\bin>java Temperature3
+Enter the temperature:
+30
+Current temperature: 30
+It's freezing in here.
+Wrapping up.
+
+C:\Program Files\JDK\bin>

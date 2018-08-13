@@ -1,0 +1,17 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Temperature2
+Enter the temperature:
+70
+Current temperature: 70
+Wrapping up.
+
+C:\Program Files\JDK\bin>java Temperature2
+Enter the temperature:
+60
+Current temperature: 60
+It's cold in here. But we'll survive.
+Wrapping up.
+
+C:\Program Files\JDK\bin>

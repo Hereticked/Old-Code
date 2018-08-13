@@ -1,0 +1,5 @@
+C:\Program Files\JDK\bin>java Room
+
+The floor space is 1200 square feet.
+
+C:\Program Files\JDK\bin>

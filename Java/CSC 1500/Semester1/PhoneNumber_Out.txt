@@ -1,0 +1,47 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java PhoneNumber
+Enter the phone number in (xxx)xxx-xxxx format :
+(123)456-7890
+Area Code : 123
+Exchange : 456
+Extension : 7890
+
+Press any key to continue.
+
+C:\Program Files\JDK\bin>java PhoneNumber
+Enter the phone number in (xxx)xxx-xxxx format :
+123 456-7890
+Area Code : 123
+Exchange : 456
+Extension : 7890
+
+Press any key to continue.
+
+C:\Program Files\JDK\bin>java PhoneNumber
+Enter the phone number in (xxx)xxx-xxxx format :
+123 456 7890
+Area Code : 123
+Exchange : 456
+Extension : 7890
+
+Press any key to continue.
+
+C:\Program Files\JDK\bin>java PhoneNumber
+Enter the phone number in (xxx)xxx-xxxx format :
+1234567890
+Did not get 3 tokens.
+User did not use the correct format.
+
+Press any key to continue.
+
+C:\Program Files\JDK\bin>java PhoneNumber
+Enter the phone number in (xxx)xxx-xxxx format :
+1 2 3 4 5 6 7 8 9 0
+Did not get 3 tokens.
+User did not use the correct format.
+
+Press any key to continue.
+
+C:\Program Files\JDK\bin>

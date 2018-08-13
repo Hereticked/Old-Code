@@ -1,0 +1,74 @@
+Decimal Data Type
+
+The decimal data type is used to specify a numeric value.
+
+The following is an example of a decimal declaration in a schema:
+<xs:element name="prize" type="xs:decimal"/>
+
+An element in your document might look like this:
+<prize>999.50</prize>
+
+Or it might look like this:
+<prize>+999.5450</prize>
+
+Or it might look like this:
+<prize>-999.5230</prize>
+
+Or it might look like this:
+<prize>0</prize>
+
+Or it might look like this:
+<prize>14</prize>
+
+Note: The maximum number of decimal digits you can specify is 18.
+Integer Data Type
+
+The integer data type is used to specify a numeric value without a fractional component.
+
+The following is an example of an integer declaration in a schema:
+<xs:element name="prize" type="xs:integer"/>
+
+An element in your document might look like this:
+<prize>999</prize>
+
+Or it might look like this:
+<prize>+999</prize>
+
+Or it might look like this:
+<prize>-999</prize>
+
+Or it might look like this:
+<prize>0</prize>
+
+Numeric Data Types
+
+Note that all of the data types below derive from the Decimal data type (except for decimal itself)!
+Name 	Description
+byte 	A signed 8-bit integer
+decimal 	A decimal value
+int 	A signed 32-bit integer
+integer 	An integer value
+long 	A signed 64-bit integer
+negativeInteger 	An integer containing only negative values (..,-2,-1)
+nonNegativeInteger 	An integer containing only non-negative values (0,1,2,..)
+nonPositiveInteger 	An integer containing only non-positive values (..,-2,-1,0)
+positiveInteger 	An integer containing only positive values (1,2,..)
+short 	A signed 16-bit integer
+unsignedLong 	An unsigned 64-bit integer
+unsignedInt 	An unsigned 32-bit integer
+unsignedShort 	An unsigned 16-bit integer
+unsignedByte 	An unsigned 8-bit integer
+
+Restrictions on Numeric Data Types
+
+Restrictions that can be used with Numeric data types:
+
+    * enumeration
+    * fractionDigits
+    * maxExclusive
+    * maxInclusive
+    * minExclusive
+    * minInclusive
+    * pattern
+    * totalDigits
+    * whiteSpace

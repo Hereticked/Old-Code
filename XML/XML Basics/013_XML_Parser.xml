@@ -1,0 +1,42 @@
+/* All modern browsers have a built-in XML parser.
+
+An XML parser converts an XML document into an XML DOM object - which can then be manipulated with a JavaScript. */
+
+
+The following code fragment parses an XML document into an XML DOM object:
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","books.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+
+The following code fragment parses an XML string into an XML DOM object:
+
+txt="<bookstore><book>";
+txt=txt+"<title>Everyday Italian</title>";
+txt=txt+"<author>Giada De Laurentiis</author>";
+txt=txt+"<year>2005</year>";
+txt=txt+"</book></bookstore>";
+
+if (window.DOMParser)
+  {
+  parser=new DOMParser();
+  xmlDoc=parser.parseFromString(txt,"text/xml");
+  }
+else // Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  xmlDoc.async="false";
+  xmlDoc.loadXML(txt);
+  }
+
+
+/* Note: Internet Explorer uses the loadXML() method to parse an XML string, while other browsers use the DOMParser object. */

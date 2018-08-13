@@ -1,0 +1,5 @@
+ionic cordova build android
+
+ionic cordova run android
+
+ionic emulate android (emulator on PC)

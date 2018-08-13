@@ -1,0 +1,21 @@
+C:\Program Files\JDK\bin>java TestBox
+
+Length = 5
+Width = 0
+Height = 0
+
+Line created
+
+Length = 10
+Width = 15
+Height = 0
+
+Rectangle created
+
+Length = 20
+Width = 25
+Height = 30
+
+Box created
+
+C:\Program Files\JDK\bin>

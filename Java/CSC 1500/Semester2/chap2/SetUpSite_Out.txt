@@ -1,0 +1,8 @@
+C:\Program Files\JDK\bin>java SetUpSite
+Event Handlers Incorporated is
+dedicated to making your event
+a most memorable one.
+Serving you for 23 years
+The number of the event site is 101
+
+C:\Program Files\JDK\bin>

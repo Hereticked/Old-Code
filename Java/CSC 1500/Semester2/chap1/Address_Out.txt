@@ -1,0 +1,7 @@
+C:\Program Files\JDK\bin>java Address
+
+James Alfred Poulette III
+121 Blossom St. Apt. 1
+Fitchburg, MA 01420
+
+C:\Program Files\JDK\bin>

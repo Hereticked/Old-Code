@@ -1,0 +1,8 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java United_States
+States in 1776: 13
+States in 1959: 50
+
+C:\Program Files\JDK\bin>

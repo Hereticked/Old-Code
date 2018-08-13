@@ -1,0 +1,11 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Addition2
+Enter a number:
+10
+Enter another number:
+15
+The sum is 25
+
+C:\Program Files\JDK\bin>

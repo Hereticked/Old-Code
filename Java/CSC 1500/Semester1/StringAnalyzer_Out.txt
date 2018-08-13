@@ -1,0 +1,21 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java StringAnalyzer
+
+Number of sentences:            2
+
+Number of words:                5
+
+Number of characters:           24
+
+Average words per sentence:     2.5
+
+Average characters per word:    4.8
+
+Longest word length:            6
+
+Most words in a sentence:       3
+
+C:\Program Files\JDK\bin>
+

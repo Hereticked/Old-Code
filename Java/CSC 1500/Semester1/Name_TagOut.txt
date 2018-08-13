@@ -1,0 +1,7 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Name_Tag James
+Hello. My name is James
+
+C:\Program Files\JDK\bin>

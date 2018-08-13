@@ -1,0 +1,9 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Division
+Integer division: 2
+Floating division: 2.25
+Remainder division: 1
+
+C:\Program Files\JDK\bin>

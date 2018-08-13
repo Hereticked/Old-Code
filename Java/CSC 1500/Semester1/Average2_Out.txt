@@ -1,0 +1,21 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Average2
+Enter a grade (-1 to quit): 92
+Enter a grade (-1 to quit): 96
+Enter a grade (-1 to quit): 88
+Enter a grade (-1 to quit): 75
+Enter a grade (-1 to quit): 89
+Enter a grade (-1 to quit): 98
+Enter a grade (-1 to quit): -1
+
+Total number of students: 6
+Average grade: 89.666664
+Highest grade: 98
+
+C:\Program Files\JDK\bin>java Average2
+Enter a grade (-1 to quit): -1
+No valid grades were entered.
+
+C:\Program Files\JDK\bin>

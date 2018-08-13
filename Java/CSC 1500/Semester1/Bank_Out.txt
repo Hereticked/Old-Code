@@ -1,0 +1,16 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Bank
+Balance of account 1 : $ 2000.0
+Balance of account 2 : $ 1000.0
+
+Balance of account 1 : $ 2700.0
+Balance of account 2 : $ 1500.0
+
+Balance of account 1 : $ 1400.0
+Balance of account 2 : $ 100.0
+
+That's all folks!
+
+C:\Program Files\JDK\bin>

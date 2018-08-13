@@ -1,0 +1,51 @@
+The INSERT INTO Statement
+
+The INSERT INTO statement is used to insert a new row in a table.
+SQL INSERT INTO Syntax
+
+It is possible to write the INSERT INTO statement in two forms.
+
+The first form doesn't specify the column names where the data will be inserted, only their values:
+INSERT INTO table_name
+VALUES (value1, value2, value3,...)
+
+The second form specifies both the column names and the values to be inserted:
+INSERT INTO table_name (column1, column2, column3,...)
+VALUES (value1, value2, value3,...)
+
+SQL INSERT INTO Example
+
+We have the following "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+
+Now we want to insert a new row in the "Persons" table.
+
+We use the following SQL statement:
+INSERT INTO Persons
+VALUES (4,'Nilsen', 'Johan', 'Bakken 2', 'Stavanger')
+
+The "Persons" table will now look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Johan 	Bakken 2 	Stavanger
+
+Insert Data Only in Specified Columns
+
+It is also possible to only add data in specific columns.
+
+The following SQL statement will add a new row, but only add data in the "P_Id", "LastName" and the "FirstName" columns:
+INSERT INTO Persons (P_Id, LastName, FirstName)
+VALUES (5, 'Tjessem', 'Jakob')
+
+The "Persons" table will now look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Johan 	Bakken 2 	Stavanger
+5 	Tjessem 	Jakob

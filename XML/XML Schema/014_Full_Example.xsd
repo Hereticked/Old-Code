@@ -1,0 +1,249 @@
+An XML Document
+
+Let's have a look at this XML document called "shiporder.xml":
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<shiporder orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson>John Smith</orderperson>
+  <shipto>
+    <name>Ola Nordmann</name>
+    <address>Langgt 23</address>
+    <city>4000 Stavanger</city>
+    <country>Norway</country>
+  </shipto>
+  <item>
+    <title>Empire Burlesque</title>
+    <note>Special Edition</note>
+    <quantity>1</quantity>
+    <price>10.90</price>
+  </item>
+  <item>
+    <title>Hide your heart</title>
+    <quantity>1</quantity>
+    <price>9.90</price>
+  </item>
+</shiporder>
+
+The XML document above consists of a root element, "shiporder", that contains a required attribute called "orderid". The "shiporder" element contains three different child elements: "orderperson", "shipto" and "item". The "item" element appears twice, and it contains a "title", an optional "note" element, a "quantity", and a "price" element.
+
+The line above: xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" tells the XML parser that this document should be validated against a schema. The line: xsi:noNamespaceSchemaLocation="shiporder.xsd" specifies WHERE the schema resides (here it is in the same folder as "shiporder.xml").
+Create an XML Schema
+
+Now we want to create a schema for the XML document above.
+
+We start by opening a new file that we will call "shiporder.xsd". To create the schema we could simply follow the structure in the XML document and define each element as we find it. We will start with the standard XML declaration followed by the xs:schema element that defines a schema:
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+...
+</xs:schema>
+
+In the schema above we use the standard namespace (xs), and the URI associated with this namespace is the Schema language definition, which has the standard value of http://www.w3.org/2001/XMLSchema.
+
+Next, we have to define the "shiporder" element. This element has an attribute and it contains other elements, therefore we consider it as a complex type. The child elements of the "shiporder" element is surrounded by a xs:sequence element that defines an ordered sequence of sub elements:
+<xs:element name="shiporder">
+  <xs:complexType>
+    <xs:sequence>
+      ...
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+Then we have to define the "orderperson" element as a simple type (because it does not contain any attributes or other elements). The type (xs:string) is prefixed with the namespace prefix associated with XML Schema that indicates a predefined schema data type:
+<xs:element name="orderperson" type="xs:string"/>
+
+Next, we have to define two elements that are of the complex type: "shipto" and "item". We start by defining the "shipto" element:
+<xs:element name="shipto">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="country" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+With schemas we can define the number of possible occurrences for an element with the maxOccurs and minOccurs attributes. maxOccurs specifies the maximum number of occurrences for an element and minOccurs specifies the minimum number of occurrences for an element. The default value for both maxOccurs and minOccurs is 1!
+
+Now we can define the "item" element. This element can appear multiple times inside a "shiporder" element. This is specified by setting the maxOccurs attribute of the "item" element to "unbounded" which means that there can be as many occurrences of the "item" element as the author wishes. Notice that the "note" element is optional. We have specified this by setting the minOccurs attribute to zero:
+<xs:element name="item" maxOccurs="unbounded">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="note" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:positiveInteger"/>
+      <xs:element name="price" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+We can now declare the attribute of the "shiporder" element. Since this is a required attribute we specify use="required".
+
+Note: The attribute declarations must always come last:
+<xs:attribute name="orderid" type="xs:string" use="required"/>
+
+Here is the complete listing of the schema file called "shiporder.xsd":
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="shiporder">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="orderperson" type="xs:string"/>
+      <xs:element name="shipto">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="item" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="note" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantity" type="xs:positiveInteger"/>
+            <xs:element name="price" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="orderid" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
+
+Divide the Schema
+
+The previous design method is very simple, but can be difficult to read and maintain when documents are complex.
+
+The next design method is based on defining all elements and attributes first, and then referring to them using the ref attribute.
+
+Here is the new design of the schema file ("shiporder.xsd"):
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+<xs:element name="orderperson" type="xs:string"/>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="address" type="xs:string"/>
+<xs:element name="city" type="xs:string"/>
+<xs:element name="country" type="xs:string"/>
+<xs:element name="title" type="xs:string"/>
+<xs:element name="note" type="xs:string"/>
+<xs:element name="quantity" type="xs:positiveInteger"/>
+<xs:element name="price" type="xs:decimal"/>
+
+<!-- definition of attributes -->
+<xs:attribute name="orderid" type="xs:string"/>
+
+<!-- definition of complex elements -->
+<xs:element name="shipto">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="name"/>
+      <xs:element ref="address"/>
+      <xs:element ref="city"/>
+      <xs:element ref="country"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="item">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="title"/>
+      <xs:element ref="note" minOccurs="0"/>
+      <xs:element ref="quantity"/>
+      <xs:element ref="price"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="shiporder">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="orderperson"/>
+      <xs:element ref="shipto"/>
+      <xs:element ref="item" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="orderid" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
+
+Using Named Types
+
+The third design method defines classes or types, that enables us to reuse element definitions. This is done by naming the simpleTypes and complexTypes elements, and then point to them through the type attribute of the element.
+
+Here is the third design of the schema file ("shiporder.xsd"):
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="stringtype">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="inttype">
+  <xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+
+<xs:simpleType name="dectype">
+  <xs:restriction base="xs:decimal"/>
+</xs:simpleType>
+
+<xs:simpleType name="orderidtype">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{6}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="shiptotype">
+  <xs:sequence>
+    <xs:element name="name" type="stringtype"/>
+    <xs:element name="address" type="stringtype"/>
+    <xs:element name="city" type="stringtype"/>
+    <xs:element name="country" type="stringtype"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="itemtype">
+  <xs:sequence>
+    <xs:element name="title" type="stringtype"/>
+    <xs:element name="note" type="stringtype" minOccurs="0"/>
+    <xs:element name="quantity" type="inttype"/>
+    <xs:element name="price" type="dectype"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="shipordertype">
+  <xs:sequence>
+    <xs:element name="orderperson" type="stringtype"/>
+    <xs:element name="shipto" type="shiptotype"/>
+    <xs:element name="item" maxOccurs="unbounded" type="itemtype"/>
+  </xs:sequence>
+  <xs:attribute name="orderid" type="orderidtype" use="required"/>
+</xs:complexType>
+
+<xs:element name="shiporder" type="shipordertype"/>
+
+</xs:schema>
+
+The restriction element indicates that the datatype is derived from a W3C XML Schema namespace datatype. So, the following fragment means that the value of the element or attribute must be a string value:
+<xs:restriction base="xs:string">
+
+The restriction element is more often used to apply restrictions to elements. Look at the following lines from the schema above:
+<xs:simpleType name="orderidtype">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{6}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+This indicates that the value of the element or attribute must be a string, it must be exactly six characters in a row, and those characters must be a number from 0 to 9.

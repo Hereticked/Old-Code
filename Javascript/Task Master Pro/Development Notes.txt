@@ -1,0 +1,46 @@
+Basic Compoments
+----------------
+
+HTML
+CSS
+Javascript
+Bootstrap
+
+Node.js: Javascript runtime environment
+NPM (Node Package Manager)
+
+Git: Version control system (needed for Bower)
+
+
+Web Tools (built in Javascript, run on Node.js)
+---------
+
+Bower: Package Manager for the web. Helps manage dependencies (frameworks, libraries, assets, utilities, etc.) that are required for building your website. (Bootstrap, Font Awesome, JQuery, etc.) Fetches these components automtically using command line.
+
+Grunt & Gulp: Task Automation
+
+Yo: Web App Scaffolding
+
+Yeoman: Workflow designed around using Yo, Bower and Grunt
+
+
+
+Less / Sass
+Angular
+Jasmin / Karma (Angular testing)
+Ionic framework
+Cordova
+Express
+MongoDB
+Mongoose
+Loopback (BaaS)
+
+
+
+Concepts
+--------
+Adaptive Web Design (Bootstrap)
+Single Page Applications (Angular)
+Hybrid Mobile Development
+REST API
+BaaS (Backend as a Service)

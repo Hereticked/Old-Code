@@ -1,0 +1,1 @@
+When compared, Java will find that data2.txt is longer than data.txt

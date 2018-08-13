@@ -1,0 +1,17 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Int_Reader
+1234 2345 3456 4567 5678 6789 7890 123 234 345
+Number is 1234
+Number is 2345
+Number is 3456
+Number is 4567
+Number is 5678
+Number is 6789
+Number is 7890
+Number is 123
+Number is 234
+Number is 345
+
+C:\Program Files\JDK\bin>

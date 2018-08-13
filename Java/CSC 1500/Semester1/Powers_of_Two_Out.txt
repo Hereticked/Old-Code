@@ -1,0 +1,8 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Powers_of_Two
+2 4 8 16 32 64 128 256 512 1024
+All done.
+
+C:\Program Files\JDK\bin>

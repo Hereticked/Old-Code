@@ -1,0 +1,12 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Python
+What is your name? Heretic
+What is your quest? Global Domination and Unification
+What is your favorite color? N/A
+Name: Heretic
+Quest: Global Domination and Unification
+Color: N/A
+
+C:\Program Files\JDK\bin>

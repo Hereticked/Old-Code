@@ -1,0 +1,40 @@
+// A request-response operation example:
+
+
+<message name="getTermRequest">
+  <part name="term" type="xs:string"/>
+</message>
+
+<message name="getTermResponse">
+  <part name="value" type="xs:string"/>
+</message>
+
+<portType name="glossaryTerms">
+  <operation name="getTerm">
+    <input message="getTermRequest"/>
+    <output message="getTermResponse"/>
+  </operation>
+</portType>
+
+<binding type="glossaryTerms" name="b1">
+   <soap:binding style="document"
+   transport="http://schemas.xmlsoap.org/soap/http" />
+   <operation>
+     <soap:operation soapAction="http://example.com/getTerm"/>
+     <input><soap:body use="literal"/></input>
+     <output><soap:body use="literal"/></output>
+  </operation>
+</binding>
+
+
+/* The binding element has two attributes - name and type.
+
+The name attribute (you can use any name you want) defines the name of the binding, and the type attribute points to the port for the binding, in this case the "glossaryTerms" port.
+
+The soap:binding element has two attributes - style and transport.
+
+The style attribute can be "rpc" or "document". In this case we use document. The transport attribute defines the SOAP protocol to use. In this case we use HTTP.
+
+The operation element defines each operation that the port exposes.
+
+For each operation the corresponding SOAP action has to be defined. You must also specify how the input and output are encoded. In this case we use "literal". */

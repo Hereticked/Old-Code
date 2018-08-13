@@ -1,0 +1,14 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Tunes
+*****************
+Number of CDs: 11
+Value of collection $134.75
+Average cost per CD: $12.25
+*****************
+Number of CDs: 17
+Value of collection $202.47
+Average cost per CD: $11.91
+
+C:\Program Files\JDK\bin>

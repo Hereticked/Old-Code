@@ -1,0 +1,47 @@
+The UPDATE Statement
+
+The UPDATE statement is used to update existing records in a table.
+SQL UPDATE Syntax
+UPDATE table_name
+SET column1=value, column2=value2,...
+WHERE some_column=some_value
+
+Note: Notice the WHERE clause in the UPDATE syntax. The WHERE clause specifies which record or records that should be updated. If you omit the WHERE clause, all records will be updated!
+SQL UPDATE Example
+
+The "Persons" table:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Johan 	Bakken 2 	Stavanger
+5 	Tjessem 	Jakob 	  	 
+
+Now we want to update the person "Tjessem, Jakob" in the "Persons" table.
+
+We use the following SQL statement:
+UPDATE Persons
+SET Address='Nissestien 67', City='Sandnes'
+WHERE LastName='Tjessem' AND FirstName='Jakob'
+
+The "Persons" table will now look like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Timoteivn 10 	Sandnes
+2 	Svendson 	Tove 	Borgvn 23 	Sandnes
+3 	Pettersen 	Kari 	Storgt 20 	Stavanger
+4 	Nilsen 	Johan 	Bakken 2 	Stavanger
+5 	Tjessem 	Jakob 	Nissestien 67 	Sandnes
+
+SQL UPDATE Warning
+
+Be careful when updating records. If we had omitted the WHERE clause in the example above, like this:
+UPDATE Persons
+SET Address='Nissestien 67', City='Sandnes'
+
+The "Persons" table would have looked like this:
+P_Id 	LastName 	FirstName 	Address 	City
+1 	Hansen 	Ola 	Nissestien 67 	Sandnes
+2 	Svendson 	Tove 	Nissestien 67 	Sandnes
+3 	Pettersen 	Kari 	Nissestien 67 	Sandnes
+4 	Nilsen 	Johan 	Nissestien 67 	Sandnes
+5 	Tjessem 	Jakob 	Nissestien 67 	Sandnes

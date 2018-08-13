@@ -1,0 +1,546 @@
+Let / Const
+-----------
+
+let = the new var
+block level variable like var, but only exists within whatever brackets its declared in
+if not within brackets, it's global
+
+const = the other new var
+variable that can't be reassigned
+
+Should use let and const when possible, var when only necessary (best practice)
+
+
+Template Literals
+-----------------
+
+Using the "back tick" character (`) is ES6's solution for better interpolation (filling in placeholders)
+
+Example:
+
+const name = "James";
+
+const hello = `Hello ${name}`;
+
+console.log(hello);
+
+Result: Hello James
+
+This feature also supports multi-line formatting (will maintain any carriage returns / spacing between the back tick characters)
+ and handling expressions 
+
+const name = "James";
+
+const hello = `Hello ${name}`;
+
+console.log(hello);
+
+const newHTML = `
+
+<div class="text">
+
+  ${name}
+
+  ${5 * 10}
+
+</div>
+`;
+
+console.log(newHTML);
+
+Result: Hello James
+
+<div class="text">
+  James
+  50
+</div>
+
+
+Functions - Default, Rest Operator and Spread Syntax
+----------------------------------------------------
+
+In ES6+ you can give the arguments of a function a default value
+
+Example:
+
+function getArea(x,y,s = 'r'){
+...
+} // If no value is provided for s, s will be 'r'
+
+
+The rest operator allows you to take "all the rest" of the arguments that are being sent to a function and place them in an array (must be used for the last argument of that function)
+
+Example:
+
+function findHighest(upperLimit, ...numList){
+...
+}
+
+const highest = findHighest(80, 99, 77, 84, 27, 54, 56)
+
+// In this case upperLimit will be 80 and numList will be all the other numbers placed in an array
+
+
+Spread basically does the opposite of the Rest operator, it allows you to take data that's already in an array and apply it to a function's arguments
+
+Example:
+
+function memberDiscount(price, discount, tax){
+...
+}
+
+const member1 = [48.99, .3, .09]
+const member1Total = memberDiscount(...member1)
+
+// Normally feeding three different arguments an array wouldn't work, but by using the rest operator in the "spread" manner, this will return the proper total.
+
+Spread syntax can even be used in the middle of delcarations and with objects
+
+Example:
+
+const others = [a, b, c]
+const myArray = [1, 2, 3, 4, ...others, 6, 7, 8]
+
+
+Arrow Function
+--------------
+
+JavaScript arrow functions are anonymous functions that cannot be used as constructor functions, (ie: with the keyword new.)
+
+Example:
+
+Regular function
+
+function(x){
+    return x + 5;
+}
+
+Arrow function
+
+x => x + 5;
+
+// Using the traditional "word function" (function (name) ()...) creates a new "this" that can reference itself. Arrow function / anonymous function is useful for when you don't want a new "this" and you want "this" to remain whatever it was one up in the function hierarchy.
+
+
+Objects Literals & Destructuring
+--------------------------------
+
+A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing it in a tidy package. This minimizes the use of global variables which can cause problems when combining code.
+
+Example:
+
+var myObject = {
+    sProp: 'some string value',
+    numProp: 2,
+    bProp: false
+};
+
+
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack (map) values from arrays, or properties from objects, into distinct variables.
+
+const someJSON = {
+title: "Blah Blah"
+overview: "O hai"
+releaseDate: "May 5th, 2012"
+...
+...
+}
+
+const { title, overview: x, releaseDate } = someJSON;
+
+console.log(title) // "Blah Blah"
+console.log(x) // "O hai"
+
+
+To save even more code, in a function, you can use destructuring in the "function signature" to do the same thing!
+
+function processData({ title, overview, releaseDate } = someJSON){
+   console.log(releaseDate);
+}
+
+processData() // "May 5th, 2012"
+
+
+Classes
+-------
+
+Javascript has no real data enscapulation, so even in ES6+ it's only "like" other Objected Oriented languages, not really following their best practices. The class creation structure is still very familiar however.
+
+Basic structure:
+
+class SuperHero {
+   constructor(name, power, speed, weapon, cape) {
+
+      this.name = name;
+		
+      this.power = power;
+		
+      this.speed = speed;
+		
+      this.weapon = weapon;
+		
+      this.cape = cape;
+	}
+	
+   powerUp() {
+		
+      this.power += 5;
+	
+   }
+
+}
+
+
+
+let hero1 = new SuperHero('James', 10, 5, 'Sword', true);
+
+hero1.powerUp();
+
+
+console.log(hero1);
+
+// SuperHero { name: 'James', power: 15, speed: 5, weapon: 'Sword', cape: true }
+
+
+Setters & Getters
+-----------------
+
+Also known as "mutator functions", used specifically to set/get variable properties.
+
+Short version: You can use _ in variable names to make them semi private in ES.
+
+From the "SuperHero" example in the pervious section, for example, it would be this._name, this._power etc.
+
+These must be added together and would go in the SuperHero class:
+
+get name(){
+   console.log("Gettine name");
+}
+
+set name(newName){
+   console.log("Setting name");
+   this._name = newName
+}
+
+
+Static Methods
+--------------
+
+Static methods are run against the class instead of against the object. Good for returning data (variables and functions) that does not change.
+
+This would go in the SuperHero class:
+
+static nameOfHeroGroup(){
+   return "The Avengers";
+}
+
+// Since there's no variable, there's no way "nameOfHeroGroup" can ever be changed.
+
+
+Sub Classes & Prototypal Inheritance
+------------------------------------
+
+class Human extends SuperHero{
+   constructor(healthPoints, ...superHeroStuff){
+      super(...superHeroStuff); // runs parent class' constructor, sends it the relevant data
+      this._healthPoints = healthPoints;
+   }
+}
+
+const billDetails = [20, "Bill", 10, 8, "Laser Eyes", true];
+const hero3 = new Human (...bilLDetails);
+
+console.log(hero3) // SuperHero readout with also healthPoints = 20
+
+
+Symbols
+-------
+
+New primitive data type in ES6, always unique, acts as an identifier.
+
+Can be stored in a variable, sort of like a "reference number." Doesn't hold a value.
+
+Example:
+
+const PERSONAGE = Symbol();
+ 
+class Person{
+    constructor(name, age){
+        this._name = name;
+        this[PERSONAGE] = age
+    }
+    get age(){
+        return this.PERSONAGE;
+    }    
+}
+
+let joe = new Person('joe', 25);
+console.log(joe) // Person { _name: 'joe', [Symbol()]: 25 }
+joe.age = 20;
+console.log(joe) // STILL Person { _name: 'joe', [Symbol()]: 25 }
+// joe.age = 20 can't reassign the value like Javascript normally would let it because it doesn't have access to the Symbol
+
+
+For Loops
+---------
+
+const arr = [1,2,3,4,5];
+
+
+Traditional array:
+
+for(let i=0; i < arr.length; i++){
+   console.log(arr[i]);
+}
+
+
+For In:
+
+for (let key in arr){
+   console.log(arr[key]);
+}
+
+Works for Objects too!
+
+const obj = {
+name: "Rob",
+occ: "teacher",
+language: "JS"
+}
+
+for(let key in obj){
+   console.log(obj[key]);
+}
+
+
+For Each: (can only be used on arrays)
+
+arr.forEach((value, i)=>{
+   console.log("Value = ", value, " Index = ", i);
+})
+
+
+For Of: (can be used on many different data types because it doesnt ask for access to the key, only the values)
+
+for(let value of arr){
+   console.log(value) // 1, 2, 3, 4, 5
+}
+
+const str = "Robert Bunch";
+
+for(let letter of str){
+   console.log(letter); // prints out each letter one by one
+}
+
+
+Array From
+----------
+
+const x = Array.from('Robert');
+console.log(x) // prints out an array with each letter from "Robert"
+
+Can take a function as a secondary argument!
+
+let numbers = Array.from([2,3,4],(num)=>num+num);
+console.log(numbers); // [4, 6, 8]
+
+
+Array Of & Array Fill
+---------------------
+
+const arr1 = Array(7);
+console.log(arr1); // [,,,,,,]
+
+const arr2 = Array.of(7);
+console.log(arr2); // [7]
+
+const arr3 = Array.of(7, "Hulk", [2,3,4], {sport:"baseball"});
+console.log(arr3); // [7, "Hulk", [2,3,4], {sport:"baseball"}]
+
+
+const arr4 = [2, 3, 4, "a", 6, 7, 8];
+
+// Array Fill args
+// 1. Value you want to fill in
+// 2. Starting index
+// 3. Stopping index
+
+arr4.fill("b", 3, 4);
+console.log(arr4); // [2, 3, 4, "b", 6, 7, 8]
+
+arr4.fill("c", -3)
+console.log(arr4); // [2, 3, 4, "b", "c", "c", "c"]
+
+
+Array Find & FindIndex
+----------------------
+
+const numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+const firstNumOver = numbers.find((num)=>{
+  return num > 40
+})
+
+const resultIndex = numbers.findIndex((num)=>{
+  return num > 40
+})
+
+console.log(firstNumOver); // 50
+console.log(resultIndex); // 4
+
+
+Reference vs Values (How JS stores variables)
+-------------------
+
+All datatypes in JS are either primitives or objects!
+
+Primitive = data that is not an object and has no methods (string, number, boolean, null, undefined, symbol)
+
+
+Primitves are stored by value.
+
+let str = "James";
+let name = str;
+str = "Bob";
+
+console.log(name); // "James" because the name assignment copied the value of str, and the value of str was not changed until after.
+
+
+Objects are stored by reference.
+
+let obj = { name: "Popeye"};
+
+let cartoon = obj; // Not a copy of obj's value, but a reference to obj
+
+console.log(obj); // { name: 'Popeye' }
+console.log(cartoon); // { name: 'Popeye' }
+
+cartoon.girlfriend = "Olive Oil";
+
+console.log(obj); // { name: 'Popeye', girlfriend: 'Olive Oil' }
+console.log(cartoon); // { name: 'Popeye', girlfriend: 'Olive Oil' }
+// The obj changed along with cartoon because they are linked by reference
+
+
+Javascript Maps
+---------------
+
+A map is just a key / value pair. It's far more protected than a regular object. It comes with some cool methods specific to "map." It is also an iterable.
+
+
+let myContacts = new Map();
+
+
+Get and Set methods:
+
+myContacts.set("Rob","555-1234");
+const rob = myContacts.get("Rob");
+
+console.log(rob); // 555-1234
+
+
+let keyFunction = ()=> { console.log("Hello, World!"); };
+
+myContacts.set(keyFunction, "Haha, I just used a function as a key!");
+const huh = myContacts.get(keyFunction);
+
+keyFunction(); // Hello, World!
+console.log(huh); // "Haha, I just used a function as a key!"
+
+
+Size method:
+
+console.log(myContacts.size); // 2
+
+
+Display map:
+
+for(value of myContacts){
+   console.log(value);
+}; // iterates through map, prints out entire map
+// can't do this with an object because objects are not iterable
+
+
+Clear method:
+
+myContacts.clear();
+console.log(myContacts); // Map is now empty
+
+
+Entries method:
+
+console.log(myContacts.entries()); // Returns whole map as an iterable
+
+
+Keys / Values methods:
+
+console.log(myContacts.keys()); // Displays all keys
+console.log(myConacts.values()); // Displays all values
+
+
+! Maps are great because they're simple and the key / value pair can be any datatypes. You can have number : string, object : function, etc. !
+
+
+Sets
+----
+
+1. A set is similar to an array, but it's not an array. (No array functions like push, pop, etc.)
+2. It can hold any data type.
+3. All elements must be unique (will not allow two of the same variable)
+4. Sets are iterable and maintain insertion order (first element will always be the first thing you put in it.)
+
+let employeeId = new Set(['a12', 'e6', 'c2', 'a12']);
+console.log(employeeId); // Set { 'a12', 'e6', 'c2' }   (won't let you add a12 twice)
+
+Set methods:
+
+add (add to set)
+size (like length for arrays)
+clear
+delete (remove a particular element)
+entries (like map, returns iterable, each element in the iterable)
+
+
+Promises / Callbacks
+--------------------
+
+Async programming essentially means that Javascript will always run the next line that can run RIGHT NOW, while placing things that may need to wait (timeouts, http requests, etc) on the event stack until they CAN be run. This is unintuitive compared to old, sequential programming, but it's Javascript's strongest asset.
+
+
+Standard function:
+
+const printUpper = function(text){
+   console.log(text.toUpperCase());
+}
+
+printUpper('Hello World'); // HELLO WORLD
+
+
+Function using Callback:
+
+
+function run(callback, input){
+   callback(input);
+}
+
+run(printUpper, 'Hello World"); // HELLO WORLD
+
+
+! A Callback is a function that is going to be run later on at some point. !
+
+
+Functions = 1st class objects. You can pass them around and store them inside a variable.
+
+a(2)(3); // How would you get this to run in Javascript? Normally it just returns an error.
+
+Answer:
+
+function a(x){
+   return function(y){
+      console.log(x+y); // 5
+   }
+}
+
+// This works because when the "a" function is run, "a(2)" is replaced by the function that's being returned and (3) enters the second function as argument y.
+
+

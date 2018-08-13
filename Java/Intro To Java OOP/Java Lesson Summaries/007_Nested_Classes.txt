@@ -1,0 +1,38 @@
+    Question 1: The program Problem.java doesn't compile. What do you need to do to make it compile? Why?
+
+
+public class Problem {
+	String s;
+	static class Inner {
+		void testMethod() {
+		   s = "Set from Inner";
+		}
+	}
+}
+
+
+
+    Answer 1: Delete static in front of the declaration of the Inner class. A static inner class does not have access to the instance fields of the outer class.
+
+
+    Question 2: Use the Java API documentation for the Box class (in the javax.swing package) to help you answer the following questions.
+
+
+http://download.oracle.com/javase/7/docs/api/javax/swing/Box.html
+
+
+        a. What static nested class does Box define?
+        Answer 2a: Box.Filler
+
+        b. What inner class does Box define?
+        Answer 2b: Box.AccessibleBox
+
+        c. What is the superclass of Box’s inner class?
+        Answer 2c:[java.awt.]Container.AccessibleAWTContainer
+
+        d. Which of Box’s nested classes can you use from any class?
+        Answer 2d: Box.Filler
+
+        e. How do you create an instance of Box’s Filler class?
+        Answer 2e: new Box.Filler(minDimension, prefDimension, maxDimension) 
+

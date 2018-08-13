@@ -1,0 +1,24 @@
+/*   * A SOAP message MUST be encoded using XML
+     * A SOAP message MUST use the SOAP Envelope namespace
+     * A SOAP message MUST use the SOAP Encoding namespace
+     * A SOAP message must NOT contain a DTD reference
+     * A SOAP message must NOT contain XML Processing Instructions     */
+
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Header>
+...
+</soap:Header>
+
+<soap:Body>
+...
+  <soap:Fault>
+  ...
+  </soap:Fault>
+</soap:Body>
+
+</soap:Envelope>

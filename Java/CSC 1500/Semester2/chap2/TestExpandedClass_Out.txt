@@ -1,0 +1,6 @@
+C:\Program Files\JDK\bin>java TestExpandedClass
+The number of the event site is 101
+Usage fee 32508.65
+Manager is Jefferson
+
+C:\Program Files\JDK\bin>

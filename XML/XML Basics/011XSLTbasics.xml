@@ -1,0 +1,10 @@
+/* Displaying XML with XSLT
+
+XSLT is the recommended style sheet language of XML.
+
+XSLT (eXtensible Stylesheet Language Transformations) is far more sophisticated than CSS.
+
+XSLT can be used to transform XML into HTML, before it is displayed by a browser.
+
+
+Different browsers may produce different result when transforming XML with XSLT. To reduce this problem the XSLT transformation can be done on the server. */

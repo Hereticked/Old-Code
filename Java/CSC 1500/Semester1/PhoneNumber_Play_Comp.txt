@@ -1,0 +1,10 @@
+Play Computer :
+
+Prompt user to enter phone number
+
+If phone number is in correct format print stats on phone number
+Else inform user that the phone number was not entered in correct format
+
+Press any key to continue.
+
+End Program

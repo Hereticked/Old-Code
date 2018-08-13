@@ -1,0 +1,20 @@
+C:\Program Files\JDK\bin>java DemoVariables
+
+The int is 315
+The short is 23
+The long is 123456789876543
+Sum is 53
+Difference is 33
+Product is 430
+Quotient is 4
+Modulus is 3
+The value of isProgrammingFun is true
+The value of isProgrammingHard is false
+The sum of the doubles is 17.1
+The product of the doubles is 34.04
+
+This is on one line
+This is on another
+This shows      how     tabs    work
+
+C:\Program Files\JDK\bin>

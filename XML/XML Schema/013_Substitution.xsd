@@ -1,0 +1,60 @@
+Element Substitution
+
+Let's say that we have users from two different countries: England and Norway. We would like the ability to let the user choose whether he or she would like to use the Norwegian element names or the English element names in the XML document.
+
+To solve this problem, we could define a substitutionGroup in the XML schema. First, we declare a head element and then we declare the other elements which state that they are substitutable for the head element.
+<xs:element name="name" type="xs:string"/>
+<xs:element name="navn" substitutionGroup="name"/>
+
+In the example above, the "name" element is the head element and the "navn" element is substitutable for "name".
+
+Look at this fragment of an XML schema:
+<xs:element name="name" type="xs:string"/>
+<xs:element name="navn" substitutionGroup="name"/>
+
+<xs:complexType name="custinfo">
+  <xs:sequence>
+    <xs:element ref="name"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="customer" type="custinfo"/>
+<xs:element name="kunde" substitutionGroup="customer"/>
+
+A valid XML document (according to the schema above) could look like this:
+<customer>
+  <name>John Smith</name>
+</customer>
+
+or like this:
+<kunde>
+  <navn>John Smith</navn>
+</kunde>
+
+Blocking Element Substitution
+
+To prevent other elements from substituting with a specified element, use the block attribute:
+<xs:element name="name" type="xs:string" block="substitution"/>
+
+Look at this fragment of an XML schema:
+<xs:element name="name" type="xs:string" block="substitution"/>
+<xs:element name="navn" substitutionGroup="name"/>
+
+<xs:complexType name="custinfo">
+  <xs:sequence>
+    <xs:element ref="name"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="customer" type="custinfo" block="substitution"/>
+<xs:element name="kunde" substitutionGroup="customer"/>
+
+A valid XML document (according to the schema above) looks like this:
+<customer>
+  <name>John Smith</name>
+</customer>
+
+BUT THIS IS NO LONGER VALID:
+<kunde>
+  <navn>John Smith</navn>
+</kunde>

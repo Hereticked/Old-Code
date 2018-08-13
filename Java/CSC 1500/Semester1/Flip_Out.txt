@@ -1,0 +1,14 @@
+Microsoft(R) Windows 95
+   (C)Copyright Microsoft Corp 1981-1996.
+
+C:\Program Files\JDK\bin>java Flip
+Enter the number of flips: 1000
+The number of heads is 487
+The number of tails is 513
+
+C:\Program Files\JDK\bin>java Flip
+Enter the number of flips: 10000
+The number of heads is 5071
+The number of tails is 4929
+
+C:\Program Files\JDK\bin>

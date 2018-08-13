@@ -1,0 +1,8 @@
+C:\Program Files\JDK\bin>java DemoMath
+The value is 26.9
+Absolute value of val is 26.9
+Absolute value of -val is 26.9
+The square root of val is 5.186520991955976
+Val rounded is 27
+
+C:\Program Files\JDK\bin>

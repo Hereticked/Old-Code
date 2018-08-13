@@ -1,0 +1,14 @@
+C:\Program Files\JDK\bin>java DemoBlock
+Demonstrating block scope
+In first block x is 1111
+In second block x is 1111
+In second block y is 2222
+In third block x is 1111
+In third block y is 3333
+In demoMethod x is 8888
+In demoMethod block y is 9999
+After method x is 1111
+After method block y is 3333
+At the end x is 1111
+
+C:\Program Files\JDK\bin>

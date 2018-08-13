@@ -1,0 +1,6 @@
+C:\Program Files\JDK\bin>java DemoOverload
+Event date 6/1/2001
+Event date 6/24/2001
+Event date 6/24/2003
+
+C:\Program Files\JDK\bin>
